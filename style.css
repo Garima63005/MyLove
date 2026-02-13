@@ -1,0 +1,152 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0b0f1a, #000);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+/* Lock & Gift */
+.lock, .gift {
+  background: rgba(20, 20, 30, 0.85);
+  padding: 28px 22px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(255, 0, 90, 0.45);
+  backdrop-filter: blur(6px);
+}
+
+h1, h2 {
+  margin: 10px 0;
+}
+
+.love-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ffd6e3;
+}
+
+/* Inputs & Buttons */
+input {
+  padding: 12px;
+  width: 90%;
+  border-radius: 8px;
+  border: none;
+  margin: 10px 0;
+  outline: none;
+}
+
+button {
+  padding: 10px 22px;
+  background: linear-gradient(45deg, #ff2e63, #ff7eb3);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  margin-top: 12px;
+  box-shadow: 0 4px 15px rgba(255, 46, 99, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(255, 46, 99, 0.6);
+}
+
+/* Story Cards */
+.story {
+  margin-top: 18px;
+}
+
+.card {
+  background: rgba(255,255,255,0.06);
+  padding: 14px;
+  border-radius: 12px;
+  margin: 12px 0;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  animation: flash 2s infinite alternate;
+  box-shadow: 0 0 12px rgba(255, 0, 90, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(255, 120, 170, 0.8);
+}
+
+/* Flash Animation */
+@keyframes flash {
+  0% { filter: brightness(0.9); }
+  100% { filter: brightness(1.25); }
+}
+
+/* Note Popup */
+.note {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.note-card {
+  background: linear-gradient(135deg, #1a1f33, #0b0f1a);
+  padding: 24px;
+  border-radius: 18px;
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(255, 0, 90, 0.6);
+  transform: rotateY(90deg);
+  animation: rotateIn 0.8s forwards;
+}
+
+.note-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ffe6ef;
+}
+
+/* Phone rotate style */
+.rotate-phone {
+  animation: phoneRotate 1s ease forwards;
+}
+
+@keyframes phoneRotate {
+  0% { transform: rotate(0deg) scale(0.8); opacity: 0; }
+  100% { transform: rotate(360deg) scale(1); opacity: 1; }
+}
+
+@keyframes rotateIn {
+  from { transform: rotateY(90deg) scale(0.8); opacity: 0; }
+  to   { transform: rotateY(0deg) scale(1); opacity: 1; }
+}
+
+.hidden {
+  display: none;
+}
