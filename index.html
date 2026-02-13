@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For Mohit ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+<audio id="bgm" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- LOCK SCREEN -->
+<div class="lock" id="lockScreen">
+  <h2>🔐 Enter Secret Date</h2>
+  <input type="password" id="code" placeholder="DDMMYYYY" />
+  <button onclick="unlock()">Unlock Gift 🎁</button>
+  <p id="error"></p>
+</div>
+
+<!-- MAIN GIFT SCREEN -->
+<div class="gift hidden" id="giftScreen">
+  <h1>Happy Valentine’s Day Mohit ❤️</h1>
+  <p class="love-text">
+    In your eyes, I found comfort.  
+    In your arms, I found my safe place.  
+    With you, even ordinary moments feel magical ✨
+  </p>
+
+  <button onclick="showStory()">Open Our Story 💌</button>
+
+  <!-- STORY -->
+  <div id="story" class="hidden story">
+    <h2>Our Story 🌙</h2>
+
+    <div class="card">
+      <h3>💖 First Meet – 08 Sept 2025</h3>
+      <p>
+        That first glance felt like a quiet promise.  
+        Two hearts recognising something familiar in each other.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>✨ Second Meet – 26 Sept 2025</h3>
+      <p>
+        Your smile felt warmer, your presence felt closer.  
+        I realised how easy it is to be myself with you.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🌹 Third Meet – 27 Oct 2025</h3>
+      <p>
+        Looking into your eyes, feeling your touch,  
+        I felt safe, understood, and quietly the happiest person alive.
+      </p>
+    </div>
+
+    <!-- FLASHING PHOTOS -->
+    <h2>Our Memories 📸</h2>
+    <div class="gallery" id="gallery">
+      <img src="img1.jpg" onclick="openNote(1)" />
+      <img src="img2.jpg" onclick="openNote(2)" />
+      <img src="img3.jpg" onclick="openNote(3)" />
+      <img src="img4.jpg" onclick="openNote(4)" />
+      <img src="img5.jpg" onclick="openNote(5)" />
+      <img src="img6.jpg" onclick="openNote(6)" />
+      <img src="img7.jpg" onclick="openNote(7)" />
+      <img src="img8.jpg" onclick="openNote(8)" />
+      <img src="img9.jpg" onclick="openNote(9)" />
+    </div>
+  </div>
+</div>
+
+<!-- NOTE POPUP -->
+<div class="note hidden" id="noteBox">
+  <div class="note-card" id="noteCard">
+    <p id="noteText"></p>
+    <button onclick="closeNote()">Close 💕</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
